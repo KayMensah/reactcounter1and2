@@ -1,34 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import App2 from "./reactcounter2";
+import App1 from "./reactcounter1"
 
-class App extends React.Component {
-  constructor() {
-    super();
+function App() {
+  
 
-    this.state = { number: 0};
-  }
-  addOne = () => {
-    this.setState({number: this.state.number + 1});
-  }
+ return(
+   <div>
+     <App1 />
+     <App2 />
+   </div>
+ )
+ }
 
-  minusOne = () => {
-    this.setState({number: this.state.number - 1});
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <h1>{this.state.number}</h1>
-        <button onClick={this.addOne}>Add 1</button>
-        <button onClick={this.minusOne}>Minus 1</button>
-
-      </div>
-    )
-
-
- 
-  }
-}
+  
 
 export default App;
